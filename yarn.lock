@@ -39,6 +39,13 @@
   dependencies:
     "@iconify/types" "^1.1.0"
 
+"@iconify-json/mdi@^1.1.17":
+  version "1.1.17"
+  resolved "https://registry.yarnpkg.com/@iconify-json/mdi/-/mdi-1.1.17.tgz#13f7f3652239efbc5144beb89ae923aa4385155a"
+  integrity sha512-7qJID/WLUe/aqYBWMV4AuiKuiwXNBG+eJk/af2Fqw4/q/9LHkOCo1qartT2z9BcX+tAX/GQ6P3peeM9k0dXjNg==
+  dependencies:
+    "@iconify/types" "^1.1.0"
+
 "@iconify-json/ph@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@iconify-json/ph/-/ph-1.1.1.tgz#17b3dee91a47055bac93d65c32b9ee33c654d56f"
