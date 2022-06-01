@@ -121,7 +121,7 @@ li {
 # 削減可能なコストを特定する方法
 
 
-<div class="grid grid-cols-2 h-4/5 items-center">
+<div v-click class="grid grid-cols-2 h-4/5 items-center">
   <div class="text-2xl text-center">
     <strong class="text-orange-400">Trusted Advisor</strong> を確認しましょう
   </div>
@@ -251,19 +251,19 @@ li {
 
 <div class="grid grid-cols-2 items-center h-4/5 divide-x">
   <ul class="justify-self-center">
-    <li>インスタンス
+    <li v-click>インスタンス
       <ul>
         <li>25万円/月</li>
       </ul>
     </li>
-    <li>監視サービス契約
+    <li v-click>監視サービス契約
       <ul>
         <li>35万円/月</li>
       </ul>
     </li>
-    <li>約60万円/月</li>
+    <li v-click>約60万円/月</li>
   </ul>
-  <div class="h-full grid justify-center items-center">
+  <div v-click class="h-full grid justify-center items-center">
     <div class="text-center">
       <div>朝と昼に一回動くだけで</div>
       <div class="text-3xl">年間720万💰</div>
@@ -418,11 +418,11 @@ layout: center
   <div class="col-span-3 my-6 flex items-center justify-center bg-gray-200 rounded h-100">
     <img src="/StepFunctionsWorkStudioFromCDKOutput.svg" class="h-full" >
   </div>
-  <mdi-arrow-right class="text-4xl self-center justify-self-center text-orange-400"/>
+  <mdi-arrow-right class="text-4xl self-center justify-self-center text-orange-400" :class="{ 'opacity-20': $slidev.nav.clicks !== 0 }"/>
   <div class="col-span-3 self-center">
     <div class="opacity-60 text-xs">↓ 左図をCDKでコーディングした例</div>
   
-```ts {all|1-7|3|4|5-8|6|7|10-11|all}
+```ts {all|1-8|3|4|5-8|6|7|10-11|all}
 // タスクの詳細とフローを分離することで
 // フローの理解に集中できる
 tarDecompressTask
@@ -436,12 +436,20 @@ tarDecompressTask
 errorNoticeTask.next(new Fail(this, 'ErrorEnd'));
 ```
   
-  <ul class="pt-6">
+  <ul class="pt-6" :class="{ 'opacity-20': $slidev.nav.clicks !== 0 }">
       <li>👍個々のタスクとフローの定義が分割可能</li>
       <li>👍チェインメソッドで流れが分かる</li>
     </ul>
   </div>
 </div>
+
+<arrow v-if="$slidev.nav.clicks===2" x1="470" y1="180" x2="330" y2="185" width="5" class="text-orange-500"/>
+<arrow v-if="$slidev.nav.clicks===3" x1="470" y1="230" x2="330" y2="285" width="5" class="text-orange-500"/>
+<arrow v-if="$slidev.nav.clicks===4" x1="470" y1="250" x2="290" y2="285" width="5" class="text-orange-500"/>
+<arrow v-if="$slidev.nav.clicks===5" x1="460" y1="255" x2="270" y2="295" width="5" class="text-orange-500"/>
+<arrow v-if="$slidev.nav.clicks===6" x1="400" y1="300" x2="270" y2="370" width="5" class="text-orange-500"/>
+<arrow v-if="$slidev.nav.clicks===7" x1="450" y1="350" x2="310" y2="425" width="5" class="text-orange-500"/>
+
 
 ---
 
@@ -491,7 +499,7 @@ export const handler = async (file: ProcessFile) => {
 <div class="grid grid-cols-2 gap-x-4 h-4/5">
   <ul class="self-center">
     <li>👍Roleの設定忘れを回避</li>
-    <li>👍本質部分に集中可能</li>
+    <li>👍ワークフローの記述に集中可能</li>
     <li>👍記述が減って可読性アップ</li>
   </ul>
   <div class="grid items-between">
@@ -640,7 +648,7 @@ Windowsインスタンスを排除し、S3のイベントでStep Functionsを起
 
 <br><br>
 <ul>
-  <li>ランニングコスト
+  <li v-click>ランニングコスト
     <ul>
       <li>Windows インスタンスにかかっていたコスト
         <ul>
@@ -649,7 +657,7 @@ Windowsインスタンスを排除し、S3のイベントでStep Functionsを起
       </li>
     </ul>
   </li>
-  <li class="mt-5">メンテナンスコスト
+  <li v-click class="mt-5">メンテナンスコスト
     <ul>
       <li>Windows インスタンスにかかっていたメンテナンスコスト
         <ul>
