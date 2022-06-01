@@ -65,8 +65,8 @@ layout: intro
   </div>
   <div class="basis-3/4 pl-10">
     <ul class="text-2xl">
-      <li>通称「ゆっきー」</li>
-      <li>大阪のスタートアップ所属エンジニア</li>
+      <li>「ゆっきー」って呼ばれています✨</li>
+      <li>CDK支部コアメンバー🕊️</li>
       <li>普段のお仕事
         <ul class="text-xl">
           <li>お客様のAWS導入サポート</li>
