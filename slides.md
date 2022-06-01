@@ -659,16 +659,8 @@ Windowsインスタンスを排除し、S3のイベントでStep Functionsを起
   </li>
   <li v-click class="mt-5">メンテナンスコスト
     <ul>
-      <li>Windows インスタンスにかかっていたメンテナンスコスト
-        <ul>
-          <li>???万円/年</li>
-        </ul>
-      </li>
-      <li>CDK以外で作成した場合の、Step Functionsのメンテナンスコスト
-        <ul>
-          <li>???万円/年</li>
-        </ul>
-      </li>
+      <li>Windows インスタンスにかかっていたメンテナンスコスト</li>
+      <li>CDK以外で作成した場合の、Step Functionsのメンテナンスコスト</li>
     </ul>
   </li>
 </ul>
@@ -690,4 +682,5 @@ layout: center
 
 # Thanks!
 
+<div v-motion-slide-left class="absolute bottom-0 right-33 h-25">CDKとStep Functionsはいいぞ</div>
 <img src="/icon_bird.png" class="absolute bottom-0 right-0 h-30" />
